@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniHuman AI Video Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../statics/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo">
+                <img src="../assets/images/logo.png" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" data-page="page1" class="nav-link">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><button class="login-btn">Sign In</button></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 添加侧边栏 -->
+    <div class="sidebar active">
+        <div class="sidebar-header">
+            <i class="fas fa-bars sidebar-toggle1"></i>
+            <span class="sidebar-title">List</span>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="active" data-page="page1">
+                <i class="fas fa-video"></i>
+                <span>Text</span>
+            </li>
+            <li data-page="page2">
+                <i class="fas fa-music"></i>
+                <span>Music</span>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="page-container">
+            <div class="page active" id="page1">
+                <div class="container">
+                    <header>
+                        <h1>Motion Video Generator</h1>
+                        <p class="subtitle">Experience the magic of AI-powered video generation.</p>
+                    </header>
+            
+                    <div class="main">
+                        <div class="generator-section">
+                            <h2>Generate Motion Video</h2>
+                            <div class="upload-section">
+                                <h3>1. Input your text</h3>
+                                <div class="text-input-container">
+                                    <div class="text-input-box">
+                                        <textarea id="action-description" placeholder="例如：举起右手，然后向左转身" maxlength="50" rows="3"></textarea>
+                                        <div class="char-counter">
+                                            <button class="clear-btn" title="清除文本">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                            <span id="char-count">0</span>/50
+                                        </div>
+                                    </div>
+                                    <div class="preset-actions">
+                                        <p class="preset-title">常用动作描述：</p>
+                                        <ul class="preset-list">
+                                            <li data-text="双手举起，然后慢慢放下">双手举起，然后慢慢放下</li>
+                                            <li data-text="向左转90度，然后向前走两步">向左转90度，然后向前走两步</li>
+                                            <li data-text="右手向前伸直，保持5秒">右手向前伸直，保持5秒</li>
+                                            <li data-text="原地跳跃三次">原地跳跃三次</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h3>2. Input your trajectory source</h3>
+                                <div class="upload-box" id="source-upload">
+                                    <i class="fas fa-music upload-icon"></i>
+                                    <p>Click to upload audio or video</p>
+                                    <p class="formats">Supports MP3, WAV, MPA, WebM</p>
+                                    <input type="file" id="source-input" accept="audio/*,video/*" style="display: none;">
+                                </div>
+                                <button class="generate-btn">Generate</button>
+                            </div>
+                        </div>
+                        <div class="result-section">
+                            <h3>Video Result</h3>
+                            <div class="result-box">
+                                <i class="fas fa-video result-icon"></i>
+                                <p>The result video will display here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page" id="page2">
+                <div class="container">
+                    <header>
+                        <h1>Motion Video Generator</h1>
+                        <p class="subtitle">Experience the magic of AI-powered video generation.</p>
+                    </header>
+            
+                    <div class="main">
+                        <div class="generator-section">
+                            <h2>Generate Motion Video</h2>
+                            <div class="upload-section">
+                                <h3>1. Unload your driving source</h3>
+                                <div class="upload-box" id="source-upload">
+                                    <i class="fas fa-music upload-icon"></i>
+                                    <p>Click to upload audio or video</p>
+                                    <p class="formats">Supports MP3, WAV, MPA, WebM</p>
+                                    <input type="file" id="source-input" accept="audio/*,video/*" style="display: none;">
+                                </div>
+                                <button class="generate-btn">Generate</button>
+                            </div>
+                        </div>
+                        <div class="result-section">
+                            <h3>Video Result</h3>
+                            <div class="result-box">
+                                <i class="fas fa-video result-icon"></i>
+                                <p>The result video will display here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/app.js"></script>
+</body>
+</html>
